@@ -22,5 +22,5 @@ i++;
 /* Null terminate the dest string */
 dest[i] = '\0';
 
- return (dest);
+return (dest);
 }
