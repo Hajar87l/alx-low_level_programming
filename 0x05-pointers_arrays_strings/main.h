@@ -1,8 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* Function prototypes */
-void print_rev(char *s);
-int _putchar(char c);
+#include <stdio.h>
+
+void rev_string(char *s);
 
 #endif /* MAIN_H */
