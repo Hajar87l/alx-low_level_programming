@@ -10,7 +10,8 @@
 int main(void)
 {
     int i;
-    char password[10]; // assuming the password length is 10 characters
+    char password[10]; /* assuming the password length is 10 characters */
+
 
     /* seed random number generator */
     srand(time(0));
