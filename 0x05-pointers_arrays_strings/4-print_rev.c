@@ -6,20 +6,23 @@
  *
  * Return: void
  */
-void print_rev(char * s) {
-  int length = 0;
-  int i;
+void print_rev(char *s)
+{
+int length = 0;
+int i;
 
-  /* Find the length of the string */
-  while (s[length]) {
-    length++;
-  }
+/* Find the length of the string */
+while (s[length])
+{
+length++;
+}
 
-  /* Print the string in reverse */
-  for (i = length - 1; i >= 0; i--) {
-    _putchar(s[i]);
-  }
+/* Print the string in reverse */
+for (i = length - 1; i >= 0; i--)
+{
+_putchar(s[i]);
+}
 
-  /* Print a new line */
-  _putchar('\n');
+/* Print a new line */
+_putchar('\n');
 }
