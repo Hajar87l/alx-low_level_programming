@@ -1,6 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ * main - Entry point, tests the function reset_to_98
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
     int n;
