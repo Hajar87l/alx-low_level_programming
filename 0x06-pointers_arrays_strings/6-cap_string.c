@@ -1,40 +1,28 @@
 #include "main.h"
-#include <ctype.h>
+#include <string.h>
 
 /**
- * cap_string - Capitalizes all words in a string
+ * cap_string - Capitalizes all words of a string
  * @s: The string to be modified
  *
- * Return: A pointer to the modified string
+ * Return: The pointer to the string
  */
 char *cap_string(char *s)
 {
-int i = 0;
-int j; /* Moved the declaration of j here */
-int newWord = 1;
+int i;
 char separators[] = " \t\n,;.!?\"(){}";
 
-while (s[i])
+for (i = 0; s[i] != '\0'; i++)
 {
-/* Check if the character is a separator */
-for (j = 0; separators[j]; j++) /* Removed int before j */
+/* Check if character is a letter */
+if (isalpha(s[i]))
 {
-if (s[i] == separators[j])
-{
-newWord = 1;
-break;
-}
-}
-
-/* Capitalize the first character of a word */
-if (newWord && isalpha(s[i]))
+/* Check if it's the first character or follows a separator */
+if (i == 0 || strchr(separators, s[i - 1]))
 {
 s[i] = toupper(s[i]);
-newWord = 0;
 }
-
-i++;
 }
-
-return s;
+}
+return (s);
 }
