@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# This script compiles a C file stored in the variable $CFILE
+# and creates an executable named cisfun.
+
+# Use gcc to compile the C file and create the executable
+gcc "$CFILE" -o cisfun

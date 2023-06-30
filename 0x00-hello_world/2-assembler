@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# This script generates the assembly code of a C file stored in the variable $CFILE
+# The output file is named the same as the C file, but with the extension .s
+
+# Extract the file name without the .c extension
+filename=$(basename -- "$CFILE")
+filename_noext="${filename%.*}"
+
+# Use gcc to generate the assembly code and save it in a file with .s extension
+gcc -S "$CFILE" -o "${filename_noext}.s"
